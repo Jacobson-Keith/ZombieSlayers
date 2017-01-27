@@ -26,7 +26,7 @@ public class ZombieSlayersG {
        
        String playerInfo = playerOne.toString();
        System.out.println(playerInfo);
- 
+       
     }
     
 }
