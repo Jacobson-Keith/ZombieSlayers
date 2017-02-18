@@ -26,18 +26,32 @@ public class GameStartZS {
 
     public void displayBanner() {
         
-        System.out.println(""
-                + "\n******************************************************"
-                + "\n******************************************************"
-                + "WELCOME TO ZOMBIE SLAYERS                             **"
-                + "\n*   asdsd                                           **"
-                + "\n* sdasd *"
-                + "\n* asd *"
-                + "\n* asd *"
-                + "\n* asd *"
-                + "\n* asd *"
-                + "\n******************************"
-        );
+        System.out.println(
+                  "\n********************************************************"
+                + "\n********************************************************"
+                + "\n******         WELCOME TO ZOMBIE SLAYERS         *******" 
+                + "\n*****                                             ******"
+                + "\n****                                                ****"
+                + "\n***                                                  ***"
+                + "\n**                                                    **"
+                + "\n* This is a game of survival, conquest, and above all  *" 
+                + "\n* fun. You will need to traverse the many dangers and  *" 
+                + "\n* mysteries that lie in store.                         *"
+                + "\n*                                                      *"
+                + "\n* You will find yourself, trapped in the dungeon of    *"
+                + "\n* full of the living dead. Blood and mysterious thing  *"
+                + "\n* await your cunning and lucky survial of the dangers  *"
+                + "\n* lurking around every room. You will aquire weapons   *"
+                + "\n* to protect yourself, open chests to aquire new items *"
+                + "\n* ,and find ways to get through locked doors. Your end *"
+                + "\n* goal is to make it out of the third dungeon alive,   *"
+                + "\n* enjoy fresh air and freedom to live in a world free  *"
+                + "\n* of the terrors you just escaped... or have you?      *"
+                + "\n*                                                      *"
+                + "\n*             GOOD LUCK STRANGER!                      *"
+                + "\n*                                                      *"
+                + "\n********************************************************"
+                ); 
         
     }
 
@@ -76,12 +90,18 @@ public class GameStartZS {
 
     private boolean doAction(String playersName){
         if (playersName.length() < 2){
-            System.out.println("\nInvalid players name: ");
+            System.out.println("\nInvalid players name: "
+            + "The name must be greater than one character in length");
+            return false;
         }
-        return true;
+      
+    Player player = GameControl.createPlayer(playersNames);
+    
+    if (player == null) {
+        System.out.println("\nError creating the player.");
+        return false;
     }
     
-    
-    
+    this.displayNextView();
     
 }
