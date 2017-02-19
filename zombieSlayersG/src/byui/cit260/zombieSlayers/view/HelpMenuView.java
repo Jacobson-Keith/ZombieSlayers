@@ -9,6 +9,9 @@ package byui.cit260.zombieSlayers.view;
  *
  * @author Chicho
  */
-class GameControl {
-    
+public class HelpMenuView {
+
+    public void displayHelpMenuView(){
+         System.out.println("This is where the help menu is");
+    }
 }

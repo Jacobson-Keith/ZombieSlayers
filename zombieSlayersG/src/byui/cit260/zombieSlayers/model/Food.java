@@ -3,20 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package buyi.cit260.zombieSlayers.model;
-
+package byui.cit260.zombieSlayers.model;
 import java.io.Serializable;
 import java.util.Objects;
-
 /**
  *
  * @author Chicho
  */
-public class Player implements Serializable {
+public class Food implements Serializable{
     
     private String name;
-    private int hp;
-    private int str; 
+    private String ability;
 
     public String getName() {
         return name;
@@ -26,36 +23,27 @@ public class Player implements Serializable {
         this.name = name;
     }
 
-    public int getHp() {
-        return hp;
+    public String getAbility() {
+        return ability;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public void setAbility(String ability) {
+        this.ability = ability;
     }
 
-    public int getStr() {
-        return str;
-    }
-
-    public void setStr(int str) {
-        this.str = str;
-    }
-
-    public Player() {
+    public Food() {
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", hp=" + hp + ", str=" + str + '}';
+        return "Food{" + "name=" + name + ", ability=" + ability + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.name);
-        hash = 97 * hash + this.hp;
-        hash = 97 * hash + this.str;
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.name);
+        hash = 53 * hash + Objects.hashCode(this.ability);
         return hash;
     }
 
@@ -70,20 +58,15 @@ public class Player implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Player other = (Player) obj;
-        if (this.hp != other.hp) {
-            return false;
-        }
-        if (this.str != other.str) {
-            return false;
-        }
+        final Food other = (Food) obj;
         if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (!Objects.equals(this.ability, other.ability)) {
             return false;
         }
         return true;
     }
     
-    
-            
     
 }

@@ -3,47 +3,47 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package buyi.cit260.zombieSlayers.model;
+package byui.cit260.zombieSlayers.model;
 import java.io.Serializable;
 import java.util.Objects;
 /**
  *
  * @author Chicho
  */
-public class Map implements Serializable{
+public class Potion implements Serializable{
     
-    private int rowCount;
-    private int columnCount;
+    private String type;
+    private String function;
 
-    public int getRowCount() {
-        return rowCount;
+    public String getType() {
+        return type;
     }
 
-    public void setRowCount(int rowCount) {
-        this.rowCount = rowCount;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public int getColumnCount() {
-        return columnCount;
+    public String getFunction() {
+        return function;
     }
 
-    public void setColumnCount(int columnCount) {
-        this.columnCount = columnCount;
+    public void setFunction(String function) {
+        this.function = function;
     }
 
-    public Map() {
+    public Potion() {
     }
 
     @Override
     public String toString() {
-        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+        return "Potion{" + "type=" + type + ", function=" + function + '}';
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 41 * hash + this.rowCount;
-        hash = 41 * hash + this.columnCount;
+        int hash = 5;
+        hash = 67 * hash + Objects.hashCode(this.type);
+        hash = 67 * hash + Objects.hashCode(this.function);
         return hash;
     }
 
@@ -58,16 +58,15 @@ public class Map implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Map other = (Map) obj;
-        if (this.rowCount != other.rowCount) {
+        final Potion other = (Potion) obj;
+        if (!Objects.equals(this.type, other.type)) {
             return false;
         }
-        if (this.columnCount != other.columnCount) {
+        if (!Objects.equals(this.function, other.function)) {
             return false;
         }
         return true;
     }
-    
     
     
 }

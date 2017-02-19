@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package buyi.cit260.zombieSlayers.model;
+package byui.cit260.zombieSlayers.model;
 import java.io.Serializable;
 import java.util.Objects;
         

@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package buyi.cit260.zombieSlayers.model;
+package byui.cit260.zombieSlayers.model;
 import java.io.Serializable;
-import java.util.Arrays;
 import java.util.Objects;
 /**
  *
  * @author Keith
  */
-public class Room implements Serializable{
+public class Item implements Serializable{
     
     //class instance variables
     private String name;
-    private String desc;
-    private int mapLocation;
+    private String type;
+    private String function;
 
-    public Room() {
+    public Item() {
     }
+    
 
     public String getName() {
         return name;
@@ -29,34 +29,34 @@ public class Room implements Serializable{
         this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getType() {
+        return type;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public int getMapLocation() {
-        return mapLocation;
+    public String getFunction() {
+        return function;
     }
 
-    public void setMapLocation(int mapLocation) {
-        this.mapLocation = mapLocation;
+    public void setFunction(String function) {
+        this.function = function;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + Objects.hashCode(this.desc);
-        hash = 89 * hash + this.mapLocation;
+        hash = 31 * hash + Objects.hashCode(this.name);
+        hash = 31 * hash + Objects.hashCode(this.type);
+        hash = 31 * hash + Objects.hashCode(this.function);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Room{" + "name=" + name + ", desc=" + desc + ", mapLocation=" + mapLocation + '}';
+        return "Item{" + "name=" + name + ", type=" + type + ", function=" + function + '}';
     }
     
     @Override
@@ -70,20 +70,18 @@ public class Room implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Room other = (Room) obj;
-        if (this.mapLocation != other.mapLocation) {
-            return false;
-        }
+        final Item other = (Item) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.desc, other.desc)) {
+        if (!Objects.equals(this.type, other.type)) {
+            return false;
+        }
+        if (!Objects.equals(this.function, other.function)) {
             return false;
         }
         return true;
     }
-    
-
     
     
     

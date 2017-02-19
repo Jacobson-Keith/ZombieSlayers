@@ -3,30 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package buyi.cit260.zombieSlayers.model;
+package byui.cit260.zombieSlayers.model;
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author Keith
  */
-public class Item implements Serializable{
+public class Weapon implements Serializable{
     
     //class instance variables
-    private String name;
     private String type;
-    private String function;
+    private double baseAttack;
+    private int reqStr;
 
-    public Item() {
-    }
-    
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Weapon() {
     }
 
     public String getType() {
@@ -37,28 +29,37 @@ public class Item implements Serializable{
         this.type = type;
     }
 
-    public String getFunction() {
-        return function;
+    public double getBaseAttack() {
+        return baseAttack;
     }
 
-    public void setFunction(String function) {
-        this.function = function;
+    public void setBaseAttack(double baseAttack) {
+        this.baseAttack = baseAttack;
+    }
+
+    public int getReqStr() {
+        return reqStr;
+    }
+
+    public void setReqStr(int reqStr) {
+        this.reqStr = reqStr;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 31 * hash + Objects.hashCode(this.name);
-        hash = 31 * hash + Objects.hashCode(this.type);
-        hash = 31 * hash + Objects.hashCode(this.function);
+        hash = 89 * hash + Objects.hashCode(this.type);
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.baseAttack) ^ (Double.doubleToLongBits(this.baseAttack) >>> 32));
+        hash = 89 * hash + this.reqStr;
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Item{" + "name=" + name + ", type=" + type + ", function=" + function + '}';
+        return "Weapon{" + "type=" + type + ", baseAttack=" + baseAttack + ", reqStr=" + reqStr + '}';
     }
     
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -70,18 +71,23 @@ public class Item implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Item other = (Item) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        final Weapon other = (Weapon) obj;
+        if (Double.doubleToLongBits(this.baseAttack) != Double.doubleToLongBits(other.baseAttack)) {
+            return false;
+        }
+        if (this.reqStr != other.reqStr) {
             return false;
         }
         if (!Objects.equals(this.type, other.type)) {
             return false;
         }
-        if (!Objects.equals(this.function, other.function)) {
-            return false;
-        }
         return true;
     }
+    
+    
+
+    
+    
     
     
     
