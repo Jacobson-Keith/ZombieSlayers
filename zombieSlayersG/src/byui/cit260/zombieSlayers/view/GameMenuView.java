@@ -12,7 +12,7 @@ package byui.cit260.zombieSlayers.view;
 public class GameMenuView {
 
     void displayMenu() {
-        System.out.println("\n*** displayMenu stub function called ***");
+        System.out.println("\n*** displayMenu stub function called ***"); 
     }
     
 }
