@@ -22,6 +22,7 @@ import byui.cit260.zombieSlayers.model.Item;
 import byui.cit260.zombieSlayers.model.Room;
 import byui.cit260.zombieSlayers.model.Treasure;
 import byui.cit260.zombieSlayers.view.StartProgramViewZS;
+import byui.cit260.zombieSlayers.control.GameControl;
 
 
 /**

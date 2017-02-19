@@ -106,13 +106,14 @@ private boolean doAction(String playersName){
         return false;
     }
 
-    this.displayNextView();
+    this.displayNextView(player);
 
     return true;
 }
 
 
-    private void displayNextView() {
+    private void displayNextView(Player player) {
+        
     System.out.println("\n======================================="
             + "\n Welcome to the game " + player.getName()
             + "\n We hope you have a lot of fun!"
@@ -123,7 +124,5 @@ private boolean doAction(String playersName){
             
     mainMenuView.displayMainMenuView();
 }
-
-   
 
 }
