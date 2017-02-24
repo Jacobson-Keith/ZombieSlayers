@@ -16,8 +16,10 @@ public class HelpMenuView {
         boolean done = false;
         do {
             String helpMenuOption = this.getHelpMenuOption();
-            if (helpMenuOption.toUpperCase().equals("Q"))
+            if (!helpMenuOption.toUpperCase().equals("Q")) {
+            } else {
                 return;
+            }
             
             done = this.doAction(helpMenuOption);
             
