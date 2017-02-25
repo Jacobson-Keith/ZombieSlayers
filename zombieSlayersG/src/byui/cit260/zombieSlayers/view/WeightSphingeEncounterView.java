@@ -5,6 +5,8 @@
  */
 package byui.cit260.zombieSlayers.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Chicho
@@ -50,9 +52,46 @@ public class WeightSphingeEncounterView {
         
         this.tooBig = "Is too big";
         this.tooSmall = "Is too small";
-        
-                
 }
+    public int getPlayersKilograms(){
+        
+        Scanner keyboard = new Scanner(System.in);
+        int value = 0;
+        boolean valid = false;
+        while (!valid) {
+            System.out.println("\n Tell me the weight in Kilograms...");
+
+            value = keyboard.nextInt();
+
+            if (value < 1){
+                System.out.println("\nThat's weightless! Gimme something more!");
+                continue;
+            }   
+            break;
+            }
+        return value;
+    }   
+    public int getPlayersPounds(){
+        
+        Scanner keyboard = new Scanner(System.in);
+        int value = 0;
+        boolean valid = false;
+        while (!valid) {
+            System.out.println("\n Tell me the weight in Pounds...");
+
+            value = keyboard.nextInt();
+
+            if (value < 1){
+                System.out.println("\nThat's weightless! Gimme something more!");
+                continue;
+            }   
+            break;
+            }
+        return value;
+    } 
+    
+    
+    
 }
 
 

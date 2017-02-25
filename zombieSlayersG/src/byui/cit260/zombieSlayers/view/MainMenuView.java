@@ -65,7 +65,7 @@ public class MainMenuView {
         
         switch (choice) {
             case "N":
-                this.startNewGame();
+                this.startDoorEncounterTest();
                 break;
             case "G":
                 this.startExistingGame();
@@ -82,7 +82,42 @@ public class MainMenuView {
         }   
         return true;
     }
-
+    
+    private void startDoorEncounterTest(){
+        
+        TriSphingeEncounterView triSphingeEncounterView = new TriSphingeEncounterView();
+        WeightSphingeEncounterView weightSphingeEncounterView = new WeightSphingeEncounterView();
+        
+        System.out.println("\n ============="
+                + "\n TEST ENVIRONMENT"
+                + "\n ============="
+                + "\n Choose between the Triangle "
+                + "\n or Weight Door Sphinges"
+                + "\n to test them out"
+                + "\n ______________"
+                + "\n A - Triangle Sphinge"
+                + "\n B - Weight Sphinge");
+        
+        Scanner keyboard = new Scanner(System.in);
+        String choice = "";
+        choice = keyboard.nextLine();
+        choice = choice.trim();   
+        
+        choice = choice.toUpperCase();
+        
+        switch (choice) {
+            case "A":
+                //triSphingeEncounterView.
+                break;
+            case "B":
+                this.startExistingGame();
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection *** Try again");
+                break;
+        }
+    }
+    
     private void startNewGame() {
         System.out.println("*** startNewGame function called ***");
         GameControl.createNewGame(ZombieSlayersG.getPlayer());
