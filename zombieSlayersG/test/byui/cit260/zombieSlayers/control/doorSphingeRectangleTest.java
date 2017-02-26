@@ -12,9 +12,9 @@ import static org.junit.Assert.*;
  *
  * @author Chicho
  */
-public class doorSphingeRectangleTest {
+public class DoorSphingeRectangleTest {
     
-    public doorSphingeRectangleTest() {
+    public DoorSphingeRectangleTest() {
     }
 
     /**
@@ -32,7 +32,7 @@ public class doorSphingeRectangleTest {
         System.out.println("Test Case #1");
         int firstSide = 4;
         int secondSide = 7;
-        doorSphingeRectangle instance = new doorSphingeRectangle();
+        DoorSphingeRectangle instance = new DoorSphingeRectangle();
         int expResult = 28;
         int result = instance.calcRectangleArea(firstSide, secondSide);
         assertEquals(expResult, result);
@@ -99,7 +99,7 @@ public class doorSphingeRectangleTest {
         
         System.out.println("TC 1");
         int areaRectangle = 28;
-        doorSphingeRectangle instance = new doorSphingeRectangle();
+        DoorSphingeRectangle instance = new DoorSphingeRectangle();
         String expResult = "That's!... You!... Just!... OH ALLRIGHT! YOU GOT IT PERFECTLY... You cheater... YOU LOOKED INTO THE CODE, DIDNT YOU?!";
         String result = instance.validateAnswers(areaRectangle);
         assertEquals(expResult, result);

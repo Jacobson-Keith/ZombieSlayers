@@ -12,9 +12,9 @@ import static org.junit.Assert.*;
  *
  * @author JacobsonKe
  */
-public class doorSphingeTriangeTest {
+public class DoorSphingeTriangeTest {
     
-    public doorSphingeTriangeTest() {
+    public DoorSphingeTriangeTest() {
     }
 
     @Test
@@ -29,7 +29,7 @@ public class doorSphingeTriangeTest {
         System.out.println("Test Case #1");
         int sideOne = 14;
         int sideTwo = 16;
-        doorSphingeTriange instance = new doorSphingeTriange();
+        DoorSphingeTriange instance = new DoorSphingeTriange();
         int expResult = 112;
         int result = instance.calcTriArea(sideOne, sideTwo);
         assertEquals(expResult, result);

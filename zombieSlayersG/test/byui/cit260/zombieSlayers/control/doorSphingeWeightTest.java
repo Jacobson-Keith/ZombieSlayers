@@ -12,9 +12,9 @@ import static org.junit.Assert.*;
  *
  * @author Chicho
  */
-public class doorSphingeWeightTest {
+public class DoorSphingeWeightTest {
     
-    public doorSphingeWeightTest() {
+    public DoorSphingeWeightTest() {
     }
 
     /**
@@ -32,7 +32,7 @@ public class doorSphingeWeightTest {
         System.out.println("Test Case 1");
         int kilograms = 20;
         int pounds = 60;
-        doorSphingeWeight instance = new doorSphingeWeight();
+        DoorSphingeWeight instance = new DoorSphingeWeight();
         double expResult = 104;
         double result = instance.calcTotalWight(kilograms, pounds);
         assertEquals(expResult, result, 0.0);
